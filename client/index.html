@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./client.css">
+    <title>Cliente api</title>
+</head>
+
+<body>
+    <div class="modal hidden" id='modal'>
+        <div class="modal-body">
+            <form method="POST" id='form'>
+                <div class="content-control">
+                    <label for="">Descripción:</label>
+                    <input type="text" class="input-control" name='descripcion' id='descripcion'>
+                </div>
+                <div class="content-control">
+                    <label for="">Marca:</label>
+                    <input type="text" class="input-control" name='marca' id='marca'>
+                </div>
+                <div class="content-control">
+                    <label for="">Presentación:</label>
+                    <input type="text" class="input-control" name='presentacion' id='presentacion'>
+                </div>
+                <div class="content-control">
+                    <label for="">Precio:</label>
+                    <input type="number" class="input-control" name='precio' id='precio'>
+                </div>
+                <div class="message" id="message-send">
+
+                </div>
+                <div class="content-control" style="display: flex; justify-content: center;">
+                    <button type="button" class="btn-success" style="width: -webkit-fill-available" id='action-form' data-action='ingresar'>Ingresar</button>
+                    <button type="button" class="btn-danger" style="width: -webkit-fill-available" id='close'>Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <section class="container">
+
+        <div class="title">
+            <h1>Droguería - Api</h1>
+        </div>
+        <div class="content-body">
+            <div class="center">
+                <div style="margin-bottom: 10px;">
+                    <input type="number" placeholder="Ingrese código del producto" id="input-filter">
+                    <button class="button-load" data-param="1">Buscar</button>
+                </div>
+                <div>
+                    <button id='register' class="button-insert btn-success">Nuevo registro</button>
+                    <button class="button-load">Cargar todos los datos</button>
+                </div>
+                <p id='loading'></p>
+            </div>
+
+            <div class="message" id="message">
+                No se ha cargado ningún dato
+            </div>
+
+            <table class="hidden">
+                <caption>Lista de productos</caption>
+                <thead>
+                    <th>Código</th>
+                    <th>Descripción</th>
+                    <th>Marca</th>
+                    <th>Presentación</th>
+                    <th>Precio</th>
+                    <th></th>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+
+    </section>
+
+    <script src="./client.js"></script>
+</body>
+
+</html>
